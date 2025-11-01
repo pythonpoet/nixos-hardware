@@ -62,7 +62,7 @@ let
         }:
         {
           linux-surface = fetchFromGitHub {
-            owner = "linux-surface";
+            owner = "pythonpoet";
             repo = "linux-surface";
             rev = rev;
             hash = hash;

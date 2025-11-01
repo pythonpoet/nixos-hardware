@@ -47,7 +47,7 @@ let
     if kernelVersion == "longterm" then
       "sha256-ozvYrZDiVtMkdCcVnNEdlF2Kdw4jivW0aMJrDynN3Hk="
     else if kernelVersion == "stable" then
-      ""
+      "sha256-MQnprmniPArsWoE6l2+AiOfbRTEyAk9XJ4CFPUoh+7Y="
     else
       abort "Invalid kernel version: ${kernelVersion}";
 

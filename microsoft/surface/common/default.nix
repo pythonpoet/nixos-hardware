@@ -19,7 +19,7 @@ let
     if kernelVersion == "longterm" then
       "6.16.9"
     else if kernelVersion == "stable" then
-      "6.17.9"
+      "6.17.5"
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
@@ -38,7 +38,7 @@ let
     if kernelVersion == "longterm" then
       "6.16.9"
     else if kernelVersion == "stable" then
-      "6.17.9"
+      "6.17.5"
     else
       abort "Invalid kernel version: ${kernelVersion}";
 

@@ -17,18 +17,18 @@ let
   srcVersion =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
-      "6.16.9"
+      "6.12.19"
     else if kernelVersion == "stable" then
-      "6.17.5"
+      "6.15.9"
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
   srcHash =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
-      "sha256-esjIo88FR2N13qqoXfzuCVqCb/5Ve0N/Q3dPw7ZM5Y0="
+      "sha256-1zvwV77ARDSxadG2FkGTb30Ml865I6KB8y413U3MZTE="
     else if kernelVersion == "stable" then
-      ""#"sha256-wF+vNunCFkvnI89q2oUzeIgE1I+d0v4b4szuNhapK84="
+      "sha256-6U86+FSSMC96gZRBRY+AvKCtmRLlpMg8aZ/zxjxSlX0="
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
@@ -36,18 +36,18 @@ let
   pkgVersion =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
-      "6.16.9"
+      "6.12.7"
     else if kernelVersion == "stable" then
-      "6.17.5"
+      "6.15.3"
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
   pkgHash =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
-      "sha256-2h+0oC8IBs3q2e7B1Ms2egYc0H5INAcCFRkFtB1sf5E="
+      "sha256-Pv7O8D8ma+MPLhYP3HSGQki+Yczp8b7d63qMb6l4+mY="
     else if kernelVersion == "stable" then
-      ""
+      "sha256-ozvYrZDiVtMkdCcVnNEdlF2Kdw4jivW0aMJrDynN3Hk="
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
@@ -62,7 +62,7 @@ let
         }:
         {
           linux-surface = fetchFromGitHub {
-            owner = "pythonpoet";
+            owner = "linux-surface";
             repo = "linux-surface";
             rev = rev;
             hash = hash;

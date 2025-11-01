@@ -17,18 +17,18 @@ let
   srcVersion =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
-      "6.15.9"
-    else if kernelVersion == "stable" then
       "6.16.9"
+    else if kernelVersion == "stable" then
+      "6.17.9"
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
   srcHash =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
-      "sha256-6U86+FSSMC96gZRBRY+AvKCtmRLlpMg8aZ/zxjxSlX0="
-    else if kernelVersion == "stable" then
       "sha256-esjIo88FR2N13qqoXfzuCVqCb/5Ve0N/Q3dPw7ZM5Y0="
+    else if kernelVersion == "stable" then
+      ""
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
@@ -36,18 +36,18 @@ let
   pkgVersion =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
-      "6.12.7"
-    else if kernelVersion == "stable" then
       "6.16.9"
+    else if kernelVersion == "stable" then
+      "6.17.9"
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
   pkgHash =
     with config.hardware.microsoft-surface;
     if kernelVersion == "longterm" then
-      "sha256-Pv7O8D8ma+MPLhYP3HSGQki+Yczp8b7d63qMb6l4+mY="
-    else if kernelVersion == "stable" then
       "sha256-2h+0oC8IBs3q2e7B1Ms2egYc0H5INAcCFRkFtB1sf5E="
+    else if kernelVersion == "stable" then
+      ""
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
@@ -62,7 +62,7 @@ let
         }:
         {
           linux-surface = fetchFromGitHub {
-            owner = "linux-surface";
+            owner = "pythonpoet";
             repo = "linux-surface";
             rev = rev;
             hash = hash;

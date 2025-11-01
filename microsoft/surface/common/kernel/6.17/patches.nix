@@ -157,4 +157,8 @@ CONFIG_SURFACE_BOOK1_DGPU_SWITCH = module;
     name = "ms-surface/0015-rtc";
     patch = patchSrc + "/0015-rtc.patch";
   }
+  {
+    name = "ms-surface/0016-camera-fix";
+    patch = patchSrc + "/0016-camera-fix.patch";
+  }
 ]

@@ -28,7 +28,7 @@ let
     if kernelVersion == "longterm" then
       "sha256-esjIo88FR2N13qqoXfzuCVqCb/5Ve0N/Q3dPw7ZM5Y0="
     else if kernelVersion == "stable" then
-      "sha256-wF+vNunCFkvnI89q2oUzeIgE1I+d0v4b4szuNhapK84="
+      ""#"sha256-wF+vNunCFkvnI89q2oUzeIgE1I+d0v4b4szuNhapK84="
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
@@ -38,7 +38,7 @@ let
     if kernelVersion == "longterm" then
       "6.16.9"
     else if kernelVersion == "stable" then
-      "6.17"
+      "6.17.5"
     else
       abort "Invalid kernel version: ${kernelVersion}";
 
@@ -62,7 +62,7 @@ let
         }:
         {
           linux-surface = fetchFromGitHub {
-            owner = "linux-surface";
+            owner = "pythonpoet";
             repo = "linux-surface";
             rev = rev;
             hash = hash;
